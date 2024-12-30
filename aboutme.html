@@ -1,48 +1,89 @@
+<style>
+    #projectCarousel {
+        position: relative;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 5%;
+        z-index: 15;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        position: fixed;
+        width: 3rem;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+    }
+    
+    .carousel-inner {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .carousel-item img,
+    .carousel-item video {
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    
+</style>
+
+
 <section>
     <div class="image-container">
-        <img src="header.jpg" alt="A photo representing me">
-    </div>
-    <div class="text-container">
-        <h1>About me</h1>
-        <p>
-            I am a master's student in Data Science, having pursued this path following my background in economics and statistics and my passion for computer science. 
-            I am particularly interested in the fields of Computer Vision and Deep Learning, with an enthusiasm for working with both images and sounds.
-            <br><br>
-            In my free time, I like to play music, develop web applications, and take photographs. I have been very passionate about the music industry since I was a kid and I am willing to relocate for an interesting opportunity.
-        </p>
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicatori -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Project 1"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Project 2"></button>
+                <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Project 3"></button>
+            </div>
+        
+            <!-- Elementi del Carosello -->
+            <div class="carousel-inner">
+                <!-- Primo elemento -->
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column align-items-center">
+                        <h2>Data Analyst</h2>
+                        <img src="header.jpg" class="d-block w-75 rounded" alt="Project 1">
+                        <p class="mt-3">Keywords: Animation, Web</p>
+                    </div>
+                </div>
+                <!-- Secondo elemento -->
+                <div class="carousel-item">
+                    <div class="d-flex flex-column align-items-center">
+                        <h2>Data Scientist</h2>
+                        <img src="header.jpg" class="d-block w-75 rounded" alt="Project 2">
+                        <p class="mt-3">Keywords: Design, Graphic</p>
+                    </div>
+                </div>
+                <!-- Terzo elemento -->
+                <div class="carousel-item">
+                    <div class="d-flex flex-column align-items-center">
+                        <h2>ML Engineer</h2>
+                        <img src="header.jpg" class="d-block w-75 rounded" alt="Project 3">
+                        <!-- <video class="d-block w-75 rounded" autoplay muted loop>
+                            <source src="project3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video> -->
+                        <p class="mt-3">Keywords: Video, Motion</p>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Frecce -->
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button> -->
+        </div>
     </div>
 </section>
-
-<style>
-    section {
-        display: flex;
-        padding: 100px;
-        border-bottom: 1px solid #ddd;
-        align-items: center;
-        justify-content: space-between;
-        bottom: 20%;
-        left: 0;
-        width: 100%;
-    }
-
-    .image-container {
-        flex: 1;
-        max-width: 50%;
-        padding-right: 20px; /* Spazio tra immagine e testo */
-    }
-
-    .image-container img {
-        width: 100%; /* Occupa tutto lo spazio della colonna */
-        border-radius: 10px; /* Bordo arrotondato */
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombreggiatura */
-    }
-
-    .text-container {
-        flex: 1;
-    }
-
-    .text-container p {
-        font-size: 10px;
-        color: #333;
-    }
-</style>
